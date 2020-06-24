@@ -20,7 +20,7 @@ services:
         depends_on:
           - mongodb
         environment:
-            - NODE_ENV=production
+            - NODE_ENV=development
 
     giffer_frontend:
         build:
@@ -30,4 +30,4 @@ services:
         ports:
             - 3000:3000
         environment:
-            - NODE_ENV=production
+            - NODE_ENV=development
