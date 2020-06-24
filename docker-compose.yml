@@ -31,4 +31,4 @@ services:
             - 3000:3000
         environment:
             - NODE_ENV=production
-        command: "yarn serve -s build -l 3000"
+        command: "yarn start"
