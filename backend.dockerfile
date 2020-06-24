@@ -5,6 +5,7 @@ WORKDIR /opt/giffer-backend
 RUN cd /opt \
     && git clone https://github.com/mano92fuentesjimenez/giffer-backend \
     && cd giffer-backend \
+    && git checkout cloud \
     && yarn
 
 CMD ["yarn","start"]
