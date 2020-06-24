@@ -1,0 +1,34 @@
+﻿version: '2'
+
+services:
+    mongodb:
+        image: mongo
+        container_name: mongodb
+        hostname: mongodb
+        volumes:  
+           - ./mongodb-data/:/data/db/
+        ports:
+            - "27017:27017"
+
+    giffer_backend:
+        build:
+            context: .
+            dockerfile: backend.dockerfile
+        image: giffer_backend
+        ports:
+            - 8000:8000
+        depends_on:
+          - mongodb
+        environment:
+            - NODE_ENV=production
+
+    giffer_frontend:
+        build:
+            context: .
+            dockerfile: frontend.dockerfile
+        image: giffer_frontend
+        ports:
+            - 3000:3000
+        environment:
+            - NODE_ENV=production
+        command: "yarn serve -s build -l 3000"
