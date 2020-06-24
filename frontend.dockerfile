@@ -9,5 +9,3 @@ RUN cd /opt \
     && cd giffer-frontend \
     && git checkout cloud \
     && yarn
-
-CMD ["yarn","start"]
