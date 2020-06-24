@@ -31,3 +31,4 @@ services:
             - 3000:3000
         environment:
             - NODE_ENV=development
+        command: "yarn start"
