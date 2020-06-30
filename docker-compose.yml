@@ -9,7 +9,7 @@ services:
         ports:
             - 3000:3000
         volumes:
-            - /opt/:/opt/
+            - /opt/download:/opt/download
         environment:
             - NODE_ENV=production
-        command: "yarn serve -s /opt -l 80"
+        command: "yarn serve -s /opt/download -l 80"
