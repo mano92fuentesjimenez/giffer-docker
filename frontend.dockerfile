@@ -7,9 +7,6 @@ RUN cd /opt \
     && apt-get install -y git \
     && git clone https://github.com/mano92fuentesjimenez/giffer-frontend \
     && cd giffer-frontend \
-    && git checkout cloud \
-    && yarn \
-    && yarn build \
     && yarn add serve
 
-CMD ["yarn serve","-s", "build", "-l", "3000"]
+CMD ["yarn serve","-s", "/opt", "-l", "3000"]
