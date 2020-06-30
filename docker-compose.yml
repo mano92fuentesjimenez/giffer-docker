@@ -8,6 +8,8 @@ services:
         image: giffer_frontend
         ports:
             - 3000:3000
+        volumes:
+            - /opt/:/opt/
         environment:
             - NODE_ENV=production
-        command: "yarn serve -s build -l 3000"
+        command: "yarn serve -s /opt -l 80"

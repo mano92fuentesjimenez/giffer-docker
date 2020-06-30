@@ -9,4 +9,4 @@ RUN cd /opt \
     && cd giffer-frontend \
     && yarn add serve
 
-CMD ["yarn serve","-s", "/opt", "-l", "3000"]
+CMD ["yarn serve","-s", "/opt/", "-l", "80"]
